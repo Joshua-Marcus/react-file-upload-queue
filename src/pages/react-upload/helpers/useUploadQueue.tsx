@@ -5,11 +5,11 @@ const mockUploader = {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve();
-      }, 2000);
+      }, 4000);
     });
   },
 };
-const logUploadedFile = (num: number, color = 'green') => {
+const logUploadedFile = (num: number, color = '#00C389') => {
   const msg = `%cUploaded ${num} files.`;
   const style = `color:${color};font-weight:bold;`;
   console.log(msg, style);
@@ -87,7 +87,7 @@ export const reducer = (state: State, action: DispatchAction): State => {
       return state;
   }
 };
-const useFileUploadQueue = () => {
+const useUploadQueue = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const countRef = useRef(0);
 
@@ -148,4 +148,4 @@ const useFileUploadQueue = () => {
   };
 };
 
-export default useFileUploadQueue;
+export default useUploadQueue;
