@@ -1,8 +1,9 @@
 import { useEffect, useReducer, useRef } from 'react';
 
 const mockUploader = {
-  uploadFile(): Promise<void> {
+  uploadFile(file: FileFormat): Promise<void> {
     return new Promise((resolve) => {
+      console.log('Uploading File', file);
       setTimeout(() => {
         resolve();
       }, 4000);
@@ -119,7 +120,7 @@ const useUploadQueue = () => {
       if (!!state.pending?.length && !!state.next) {
         try {
           const { next } = state;
-          await mockUploader.uploadFile();
+          await mockUploader.uploadFile(next);
           const previous = next;
           logUploadedFile(++countRef.current);
           const pending = state.pending?.slice(1);
