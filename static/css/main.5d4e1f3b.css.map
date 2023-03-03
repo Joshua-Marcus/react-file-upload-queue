@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.5d4e1f3b.css","mappings":"AAAA;;CAAA,29JAEA,moDAGE,oGAIA,UAJA,WAIA","sources":["styles/index.scss"],"sourcesContent":["@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\nhtml {\n  @apply h-full bg-white;\n}\n\nbody {\n  @apply h-full overflow-hidden;\n}\n"],"names":[],"sourceRoot":""}
