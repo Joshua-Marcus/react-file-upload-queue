@@ -1,3 +1,9 @@
 {
-  "scss.lint.unknownAtRules": "ignore"
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.tslint": true,
+    "source.organizeImports": true
+  },
+  "scss.lint.unknownAtRules": "ignore",
+  "js/ts.implicitProjectConfig.experimentalDecorators": true
 }
